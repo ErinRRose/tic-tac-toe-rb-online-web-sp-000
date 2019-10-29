@@ -50,6 +50,7 @@ turn(board)
 if draw?(board)
   puts "Cat's Game!"
   end
+end
 
   if won?(board)
     puts "Congratulations #{winner(board)}!"
