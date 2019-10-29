@@ -46,8 +46,11 @@ end
 
 def play(board)
 
-  until over?(board) && !draw?(board)
+  until over?(board)
     turn(board)
+    if draw?(board)
+      break
+    end
   end
 
   if won?(board)
