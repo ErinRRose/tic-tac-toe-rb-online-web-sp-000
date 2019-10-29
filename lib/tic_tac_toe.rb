@@ -45,12 +45,10 @@ def turn(board)
 end
 
 def play(board)
-  until over?(board)
-turn(board)
-if draw?(board)
-  puts "Cat's Game!"
+
+  until over?(board) && !draw?(board)
+    turn(board)
   end
-end
 
   if won?(board)
     puts "Congratulations #{winner(board)}!"
