@@ -14,7 +14,7 @@
       <img src="./assets/0.10.2/loading.gif" alt="loading"/>
     </div>
     <div id="wrapper" style="display:none;">
-      <div class="timestamp">Generated <abbr class="timeago" title="2019-10-29T01:55:59+00:00">2019-10-29T01:55:59+00:00</abbr></div>
+      <div class="timestamp">Generated <abbr class="timeago" title="2019-10-29T01:57:48+00:00">2019-10-29T01:57:48+00:00</abbr></div>
       <ul class="group_tabs"></ul>
 
       <div id="content">
@@ -25,7 +25,7 @@
      covered at
      <span class="covered_strength">
        <span class="green">
-         7.2
+         6.8
        </span>
     </span> hits/line)
   </h2>
@@ -57,7 +57,7 @@
         <td>49</td>
         <td>45</td>
         <td>4</td>
-        <td>7.2</td>
+        <td>6.8</td>
       </tr>
       
     </tbody>
@@ -225,13 +225,13 @@
         <li class="covered" data-hits="1" data-linenumber="23">
           <span class="hits">1</span>
           
-          <code class="ruby">def move(board, index)</code>
+          <code class="ruby">def move(board, index, current_player)</code>
         </li>
       
-        <li class="covered" data-hits="3" data-linenumber="24">
-          <span class="hits">3</span>
+        <li class="covered" data-hits="5" data-linenumber="24">
+          <span class="hits">5</span>
           
-          <code class="ruby">  board[index] = current_player(board)</code>
+          <code class="ruby">  board[index] = current_player</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="25">
@@ -327,7 +327,7 @@
         <li class="covered" data-hits="2" data-linenumber="40">
           <span class="hits">2</span>
           
-          <code class="ruby">    move(board, index)</code>
+          <code class="ruby">    move(board, index, current_player(board))</code>
         </li>
       
         <li class="covered" data-hits="2" data-linenumber="41">
@@ -420,8 +420,8 @@
           <code class="ruby">def turn_count(board)</code>
         </li>
       
-        <li class="covered" data-hits="50" data-linenumber="56">
-          <span class="hits">50</span>
+        <li class="covered" data-hits="40" data-linenumber="56">
+          <span class="hits">40</span>
           
           <code class="ruby">board.count{|token| token == &quot;X&quot; || token == &quot;O&quot;}</code>
         </li>
@@ -432,20 +432,20 @@
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="5" data-linenumber="58">
-          <span class="hits">5</span>
+        <li class="covered" data-hits="4" data-linenumber="58">
+          <span class="hits">4</span>
           
           <code class="ruby">turns = 0</code>
         </li>
       
-        <li class="covered" data-hits="5" data-linenumber="59">
-          <span class="hits">5</span>
+        <li class="covered" data-hits="4" data-linenumber="59">
+          <span class="hits">4</span>
           
           <code class="ruby">board.each do |token|</code>
         </li>
       
-        <li class="covered" data-hits="45" data-linenumber="60">
-          <span class="hits">45</span>
+        <li class="covered" data-hits="36" data-linenumber="60">
+          <span class="hits">36</span>
           
           <code class="ruby">  if token == &quot;X&quot; || token == &quot;O&quot;</code>
         </li>
@@ -468,8 +468,8 @@
           <code class="ruby">end</code>
         </li>
       
-        <li class="covered" data-hits="5" data-linenumber="64">
-          <span class="hits">5</span>
+        <li class="covered" data-hits="4" data-linenumber="64">
+          <span class="hits">4</span>
           
           <code class="ruby">turns</code>
         </li>
@@ -492,8 +492,8 @@
           <code class="ruby">def current_player(board)</code>
         </li>
       
-        <li class="covered" data-hits="4" data-linenumber="68">
-          <span class="hits">4</span>
+        <li class="covered" data-hits="3" data-linenumber="68">
+          <span class="hits">3</span>
           
           <code class="ruby">  turn_count(board) % 2 == 0 ? &quot;X&quot; : &quot;O&quot;</code>
         </li>
