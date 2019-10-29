@@ -45,11 +45,9 @@ def turn(board)
 end
 
 def play(board)
-counter = 1
-while counter <= 9
-  turn(board)
-  counter += 1
-end
+  until over?(board)
+turn(board)
+  end
 end
 
 def turn_count(board)
@@ -92,8 +90,4 @@ def winner(board)
 if winning_combo = won?(board)
   board[winning_combo.first]
 end
-end
-
-def play(board)
-  input = gets
 end
